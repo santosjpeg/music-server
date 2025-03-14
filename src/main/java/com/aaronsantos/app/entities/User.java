@@ -1,5 +1,6 @@
 package com.aaronsantos.app.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;          // For marking this class as a JPA entity
 import javax.persistence.Table;           // To specify the table name
 import javax.persistence.Id;              // To mark the primary key field
@@ -14,7 +15,9 @@ public class User
   private Long id;
 
   private String username;
-  private String password;
+
+  @Column(name = "password_hash", nullable=false)
+  private String passwordHash;
 
   public Long getId() {
        return id;
@@ -32,11 +35,13 @@ public class User
       this.username = username;
   }
 
-  public String getPassword() {
-      return password;
+  public String getPasswordHash()
+  {
+    return this.passwordHash;
   }
 
-  public void setPassword(String password) {
-      this.password = password;
+  public void setPasswordHash(String passwordHash)
+  {
+    this.passwordHash = passwordHash;
   }
 }

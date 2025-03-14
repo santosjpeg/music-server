@@ -7,9 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
 
-//TODO: Implement to_break flag
-//TODO - Migrate handling the exit command to Menu
-
 @SpringBootApplication
 public class App {
     public static void main(String[] args) {

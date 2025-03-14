@@ -1,11 +1,9 @@
 package com.aaronsantos.app.repositories;
 
 import com.aaronsantos.app.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public class UserRepository
-{
-  public static void name() {
-    System.out.println("name");
-     
-  }
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
 }
